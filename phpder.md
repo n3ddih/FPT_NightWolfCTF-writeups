@@ -71,3 +71,5 @@ $ curl http://chall4.ctf.night-wolf.io/authentication.php -b 'login="TzoxMDoiYWN
 Deserialization error. FNW_CTF{pHp_0bj4ct_inj4ct10n_vu1n}
 ```
 ✨✨✨
+
+[Go back](..)
